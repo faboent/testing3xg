@@ -1,0 +1,5 @@
+[context.production]
+  environment = { VITE_APP_API_BASE_URL = "https://dev-api1.3xg.africa" }
+
+[context.staging]
+  environment = { VITE_APP_API_BASE_URL = "https://staging-api1.3xg.africa" }

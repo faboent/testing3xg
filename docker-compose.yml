@@ -1,0 +1,18 @@
+services:
+  merchants-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - VITE_APP_API_BASE_URL=https://dev-api1.3xg.africa/
+        - NODE_ENV=staging
+    container_name: merchants-web
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=staging
+      - VITE_APP_API_BASE_URL=https://dev-api1.3xg.africa/
+    restart: unless-stopped
+    # Optional: If you need to mount volumes
+    # volumes:
+    #   - ./public:/app/public
